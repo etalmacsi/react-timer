@@ -17,7 +17,7 @@ let Nav= React.createClass({
                         </li>
 
                         <li>
-                            <Link to="" activeClassName="active-link">Countdown</Link>
+                            <Link to="/countdown" activeClassName="active-link">Countdown</Link>
                         </li>
                     </ul>
                </div>
