@@ -28,3 +28,15 @@ N
 app/styles/base/_variable.scss,7\3\736786b19b478afd451044a198db0e6c298718c3
 O
 app/styles/components/_nav.scss,4\e\4e78706fae0ea2464b1133ecf30336dd3f30f9db
+E
+app/test/app.test.jsx,0\3\03671e1fe1e81749f7c2e3d2a9eeaec5995e2c32
+=
+karma.conf.js,6\e\6eb8460cf2aab85b9580d3e2e5e3c951e67f257f
+H
+app/components/Timer.jsx,b\d\bd93dc91d7aa99aa6de564cbad52a48785631ffd
+L
+app/components/Countdown.jsx,8\c\8c8a4af60d93e80ae27338725dd1987aaa7f7859
+H
+app/components/Clock.jsx,a\e\aee28cd9d4657f9e2c57f37aee0ee72211719c57
+R
+"app/test/components/Clock.test.jsx,c\8\c80056597b5cb29d780e701308833eb2a8ac64c4
