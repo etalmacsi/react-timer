@@ -22,3 +22,9 @@ A
 public/bundle.js,5\5\55c08f4da8fb20d0e158b2634dc2b62d1bb648b4
 C
 app/styles/app.scss,e\1\e186e234637cbf59a5183b5bd932532168972f8a
+F
+app/components/Nav.jsx,3\a\3aec69415d82cfb0abf830a627f4fc62cbae735d
+N
+app/styles/base/_variable.scss,7\3\736786b19b478afd451044a198db0e6c298718c3
+O
+app/styles/components/_nav.scss,4\e\4e78706fae0ea2464b1133ecf30336dd3f30f9db
