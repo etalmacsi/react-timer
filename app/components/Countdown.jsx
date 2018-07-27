@@ -6,7 +6,7 @@ let Countdown= React.createClass({
     getInitialState:function(){
         return{
             count:0,
-            countdownStatus:'stopeed',
+            countdownStatus:'stopped',
         }
     },
 
