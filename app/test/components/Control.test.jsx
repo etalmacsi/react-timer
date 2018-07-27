@@ -26,7 +26,7 @@ describe('Controls',()=>{
                let $el = $(ReactDOM.findDOMNode(controls));
                let $pauseButton =$el.find('button:contains(Start)');
 
-               expect($pauseButton.length).toBe(0);
+               expect($pauseButton.length).toBe(1);
 
        });
    });
