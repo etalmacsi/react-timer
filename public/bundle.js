@@ -107,11 +107,11 @@
 	var Timer = __webpack_require__(225);
 	var Countdown = __webpack_require__(226);
 
-	__webpack_require__(229);
+	__webpack_require__(230);
 	$(document).foundation();
 
 	//App css
-	__webpack_require__(233);
+	__webpack_require__(234);
 
 	ReactDOM.render(React.createElement(
 	    Router,
@@ -25030,7 +25030,7 @@
 	        return React.createElement(
 	            'h1',
 	            null,
-	            'Timer'
+	            'Timerssssssssssssss'
 	        );
 	    }
 	});
@@ -25046,7 +25046,7 @@
 	var React = __webpack_require__(8);
 	var Clock = __webpack_require__(227);
 	var CountdownForm = __webpack_require__(228);
-	var Controls = __webpack_require__(236);
+	var Controls = __webpack_require__(229);
 
 	var Countdown = React.createClass({
 	    displayName: 'Countdown',
@@ -25227,13 +25227,73 @@
 /* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var Controls = React.createClass({
+	    displayName: 'Controls',
+
+	    propTypes: {
+	        countdownStatus: React.PropTypes.string.isRequired,
+	        onStatusChange: React.PropTypes.func.isRequired
+	    },
+
+	    onStatusChange: function onStatusChange(newStatus) {
+	        var _this = this;
+
+	        return function () {
+	            _this.props.onStatusChange(newStatus);
+	        };
+	    },
+
+	    render: function render() {
+	        var _this2 = this;
+
+	        var countdownStatus = this.props.countdownStatus;
+
+	        var renderStartStopButton = function renderStartStopButton() {
+	            if (countdownStatus === 'started') {
+	                return React.createElement(
+	                    'button',
+	                    { className: 'button secondary', onClick: _this2.onStatusChange('paused') },
+	                    'Pause'
+	                );
+	            } else if (countdownStatus === 'paused') {
+	                return React.createElement(
+	                    'button',
+	                    { className: 'button primary', onClick: _this2.onStatusChange('started') },
+	                    'Start'
+	                );
+	            }
+	        };
+
+	        return React.createElement(
+	            'div',
+	            { className: 'controls' },
+	            renderStartStopButton(),
+	            React.createElement(
+	                'button',
+	                { className: 'button alert hollow', onClick: this.onStatusChange('stopped') },
+	                'Clear'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Controls;
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(230);
+	var content = __webpack_require__(231);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(232)(content, {});
+	var update = __webpack_require__(233)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25250,10 +25310,10 @@
 	}
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(231)();
+	exports = module.exports = __webpack_require__(232)();
 	// imports
 
 
@@ -25264,7 +25324,7 @@
 
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, exports) {
 
 	/*
@@ -25320,7 +25380,7 @@
 
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -25574,16 +25634,16 @@
 
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(234);
+	var content = __webpack_require__(235);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(232)(content, {});
+	var update = __webpack_require__(233)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25600,10 +25660,10 @@
 	}
 
 /***/ }),
-/* 234 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(231)();
+	exports = module.exports = __webpack_require__(232)();
 	// imports
 
 
@@ -25612,67 +25672,6 @@
 
 	// exports
 
-
-/***/ }),
-/* 235 */,
-/* 236 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(8);
-
-	var Controls = React.createClass({
-	    displayName: 'Controls',
-
-	    propTypes: {
-	        countdownStatus: React.PropTypes.string.isRequired,
-	        onStatusChange: React.PropTypes.func.isRequired
-	    },
-
-	    onStatusChange: function onStatusChange(newStatus) {
-	        var _this = this;
-
-	        return function () {
-	            _this.props.onStatusChange(newStatus);
-	        };
-	    },
-
-	    render: function render() {
-	        var _this2 = this;
-
-	        var countdownStatus = this.props.countdownStatus;
-
-	        var renderStartStopButton = function renderStartStopButton() {
-	            if (countdownStatus === 'started') {
-	                return React.createElement(
-	                    'button',
-	                    { className: 'button secondary', onClick: _this2.onStatusChange('paused') },
-	                    'Pause'
-	                );
-	            } else if (countdownStatus === 'paused') {
-	                return React.createElement(
-	                    'button',
-	                    { className: 'button primary', onClick: _this2.onStatusChange('started') },
-	                    'Start'
-	                );
-	            }
-	        };
-
-	        return React.createElement(
-	            'div',
-	            { className: 'controls' },
-	            renderStartStopButton(),
-	            React.createElement(
-	                'button',
-	                { className: 'button alert hollow', onClick: this.onStatusChange('stopped') },
-	                'Clear'
-	            )
-	        );
-	    }
-	});
-
-	module.exports = Controls;
 
 /***/ })
 /******/ ]);
