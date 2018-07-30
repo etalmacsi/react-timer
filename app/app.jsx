@@ -5,8 +5,7 @@ let Main =require('Main');
 let Timer = require('Timer');
 let Countdown =require('Countdown');
 
-
-require('style!css!foundation-sites/dist/foundation.min.css');
+//load Fundation
 $(document).foundation();
 
 //App css
